@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Информация по категориям{% endblock %}
+
+{% block main_content %}
+  <h1>Категории</h1>
+  <ul>
+  {% for category in categories %}
+    <li><span class="badge badge-info">{{ category }}</span></li>
+  {% empty %}
+    <li>Список пуст. Попробуйте добавить их из админки</li>
+  {% endfor %}
+  </ul>
+  <hr>
+  <h1>Важность</h1>
+  <ul>
+  {% for priority in priorities %}
+    <li><span class="badge badge-info">{{ priority }} {{ priority.todos_count }}</span></li>
+  {% empty %}
+    <li>Список пуст. Попробуйте добавить их из админки</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
