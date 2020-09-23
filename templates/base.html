@@ -21,8 +21,10 @@
               <p>Login: {{ user.username }}</p>
             {% endif %}
               <ul>
+                {% if user.is_authenticated %}
                 <li><i class="fas fa-clipboard-list"></i>&nbsp;<a href="{% url "tasks:list" %}">задачи</a></li>
                 <li><i class="fas fa-clipboard-list"></i>&nbsp;<a href="{% url "tasks:index" %}">категории</a></li>
+                {% endif %}
                 <li><i class="fas fa-cog"></i>&nbsp;<a href='{% url "tasks:date_time" %}'>DATETIME</a></li>
                 <li><i class="fas fa-cog"></i>&nbsp;<a href='{% url 'admin:index' %}'>админка</a></li>
               </ul>
