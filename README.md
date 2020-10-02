@@ -42,3 +42,6 @@ python manage.py runserver
 8. Открыть URL:
 
 http://127.0.0.1:8000/
+
+На Heroku
+https://immense-sands-25494.herokuapp.com
